@@ -9,7 +9,7 @@ public class RobotMap
 	public final static int RIGHT_FRONT_MOTOR = 6;
   	public final static int LEFT_FRONT_MOTOR = 7;
 	public final static int RIGHT_BACK_MOTOR = 5;
-    public final static int LEFT_BACK_MOTOR = 8;
+    	public final static int LEFT_BACK_MOTOR = 8;
 	
 	//Arms motors
 	public final static int TOP_LEFT_MOTOR = 1;
@@ -22,10 +22,11 @@ public class RobotMap
 	public final static int TRACK_SOLENOID = 1;
 	
 	//Limit Switches
-	public final static int LIMIT_TOP = 0;
-	public final static int LIMIT_BOTTOM = 1;
-	public final static int LIMIT_BACK = 2;
-    
+	public final static int LIMIT_TOP = 3; // 1/30 Wiring Elevator Top Limit Switch
+	public final static int LIMIT_BOTTOM = 2; // 1/30 Wiring Elevator Bottom Limit Switch
+	public final static int LIMIT_BACK = 1; // 1/30 Hatch Panel Slide Retracted Limit Switch
+    	// public final static int COMPRESSOR_ENABLE = 0; // 1/30 Compressor Enable Switch (is this looking okay?)
+	
     //Controllers
     public static XboxController driveController = new XboxController(0);
     public static XboxController manipController = new XboxController(1);
