@@ -1,3 +1,4 @@
+
 1. Sort coordinates
    - 1 = lowest y, if tie lowest x
    - 2 = highest x of remaining 3, if tie lowest y
@@ -40,7 +41,7 @@ for(int i = 0; i<7; i+=2){
   
 		x1 = array[i];
         	
-		y1 = array[i+1];
+		y1 =-( array[i+1]);
 	        	
 		pos1 = i;
      
@@ -58,7 +59,7 @@ for(int i = 0; i<7;i+=2){
      
    		x2 = array[i];
       
-  		y2 = array[i+1];
+  		y2 = -(array[i+1]);
         
 		pos2 = i;
         
@@ -76,7 +77,7 @@ for(int i = 0; i < 7; i+=2){
 
 		x3 = array[i];
        
- 		y3 = array[i+1];
+ 		y3 =-( array[i+1]);
         
 		pos3 = i;
         	
@@ -94,28 +95,36 @@ for(int i = 0; i < 7; i+=2){
         
 		x4=array[i];
         	
-		y4=array[i+1];
+		y4=-(array[i+1]);
      
    	}
+
        
+}
+//find the center of the square made by previous 4 points
+int center_Y = (y1 + y3)/2;
+int center_X = (x1 + x3)/2;
+//find slope of points 1 and 4
+int slope = (y1-y4)/(x1-x2);
+// if slope is positive turn sharp right or slight right
+if(slope>=7){
+	System.out.println("Turn Slight Right");
+}
+if(slope>=0 && slope <7){
+	System.out.println("Turn sight Right");
+}
+// if slope is positive turn sharp right or slight right
+if(slope<=-7){
+	System.out.println("Turn Sharp Left");
+}
+if(slope<=0 && slope >-7){
+	System.out.println("Turn Slight Left");
 }
 
 
-
 //1. Find the distance between 1 and 2 and between 1 and 4
+
 //2. Figure out if one of the lines is the top of the screen - if so, save the other one
 //3. If neither was the top of the screen, save whichever is longer
 //4. If the line between 1 and 2 was saved, turn left; if the line between 1 and 4 was saved, turn right
 //5. Find the angle between the long side and a vertical line (inverse trig)     
-		
-
-
-
-
-
-
-
-
-
-
-
